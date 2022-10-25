@@ -13,5 +13,9 @@ public class L5ManipulacionCadenas {
         // equals(cadena): comprueba si dos cadenas de caractere
         // son iguales o no. Tiene en cuenta maypuscula o minus
         // equalsIgnoreCase(cadena): lo anterior pero ignora case
+        String nombre = "Juan";
+        System.out.println(nombre);
+        System.out.println("Mi nombre tiene " + nombre.length() + " letras");
+
     }
 }
