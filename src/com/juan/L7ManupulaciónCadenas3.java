@@ -9,5 +9,6 @@ public class L7ManupulaciónCadenas3 {
         System.out.println(alumno1.equals(alumno2));
         // Distingue mayusculas de minusculas
         System.out.println(alumno1.equalsIgnoreCase(alumno2));
+        // No distingue mayus de minus
     }
 }
