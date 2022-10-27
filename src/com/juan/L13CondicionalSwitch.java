@@ -1,6 +1,7 @@
 package com.juan;
 
 import javax.swing.*;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class L13CondicionalSwitch {
@@ -44,7 +45,8 @@ public class L13CondicionalSwitch {
             case 4: {
                 int radio = Integer.parseInt(JOptionPane.showInputDialog("Introduzca el valor del radio"));
                 double areaCirculo= Math.PI * Math.pow(radio, 2);
-                JOptionPane.showMessageDialog(null, "El area del circulo es" + areaCirculo  );
+                DecimalFormat df = new DecimalFormat("#0.00"); // da formato a los decimales
+                JOptionPane.showMessageDialog(null, "El area del circulo es " + df.format(areaCirculo));
                 break;
             }
             default:{
