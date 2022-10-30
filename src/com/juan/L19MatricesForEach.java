@@ -25,9 +25,9 @@ public class L19MatricesForEach {
         paises[4] = "Chile";
         paises[5] = "Argentina";
         paises[6] = "Ecuador";
-        paises[7] = "Venezuela";*/
+        paises[7] = "Venezuela";*
 
-
+         */
         // String [] paises = {"España", "Mexico", "Colombia", "Perú", "Chile", "Argentina", "Ecuador", "Venezuela"};
         String [] paises = new String[8];
         for(int i = 0; i<8; i++){
