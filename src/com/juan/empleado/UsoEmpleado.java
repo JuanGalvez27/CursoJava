@@ -21,10 +21,11 @@ public class UsoEmpleado {
         System.out.println("Nombre: " +empleado3.getNombre() + " Sueldo: " +
                 empleado3.getSueldo() + " Fecha de alta: " + empleado3.getAltaContrato());*/
 
-        Empleado[] misEmpleados = new Empleado[3];
+        Empleado[] misEmpleados = new Empleado[4];
         misEmpleados[0] = new Empleado("Juan Galvez", 4000000, 2022, 11, 11);
         misEmpleados[1] = new Empleado("Ana Lopez", 5000000, 2022, 22, 8);
         misEmpleados[2] = new Empleado("María Marín", 3600000, 2021,19, 12);
+        misEmpleados[3] = new Empleado("Juan Fernando");
         /*for(int i = 0; i< misEmpleados.length; i++){
             misEmpleados[i].subirSueldo(5);
         }*/
@@ -47,6 +48,17 @@ class Empleado{
         // class GregorianCalendar: construye una fecha
         GregorianCalendar calendario = new GregorianCalendar(year, mes-1, dia);
         altaContrato = calendario.getTime();
+    }
+    // Crear varias constructores dentro de la misma clase
+    // me sirve para darle diferentes inciciaciones a
+    // mis objetos creados.
+    // Se tomará el constructor dependiendo de la cantidad
+    // de argumentos que se le indique en la instancia.
+    public Empleado(String nom){
+        this(nom, 30000, 2000,01,01);
+        // Al hacer ésto lo que hacemos es llamar al
+        // otro constructor de la misma clase y darle
+        // los argumentos mediante éste.
     }
     private String nombre;
     private double sueldo;
