@@ -11,4 +11,7 @@ public class Furgoneta extends Coche{
         this.capacidadCarga = capacidadCarga;
         this.plazasExtra = plazasExtra;
     }
+    public String getDataFurgoneta (){
+        return "La capacidad de carga es: " + capacidadCarga + " y las plazas son: " + plazasExtra;
+    }
 }
