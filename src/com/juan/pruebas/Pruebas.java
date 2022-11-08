@@ -36,3 +36,4 @@ class Empleado{
         return "El ID siguiente es: " + idSiguiente;
     }
 }
+

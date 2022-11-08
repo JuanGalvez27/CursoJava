@@ -81,5 +81,31 @@ class Empleado{
         double aumento = sueldo*porcentaje/100;
             sueldo+=aumento;
     }
+}
 
+/**
+ *  Diseño de herencia:
+ *  hacerse la pregunta: ¿...es un...?
+ *  para saber qué clase hereda a cuál, así:
+ *  el objeto Jefe sí va a ser un Empleado
+ *  pero un empleado no necesariamente va a ser un jefe
+ */
+
+class Jefatura extends Empleado {
+    private double incentivo;
+
+    public Jefatura(String nom, double sue, int year, int mes, int dia){
+        super(nom, sue, year, mes, dia);
+
+    }
+
+    public void setIncentivo(double b){
+        incentivo = b;
+    }
+
+    //Sobreescribimos el getSueldo de la clase empleado
+    public double getSueldo(){
+        double sueldoJefe = getSueldo();
+        return sueldoJefe+incentivo;
+    }
 }
