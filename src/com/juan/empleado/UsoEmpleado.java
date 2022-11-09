@@ -21,11 +21,16 @@ public class UsoEmpleado {
         System.out.println("Nombre: " +empleado3.getNombre() + " Sueldo: " +
                 empleado3.getSueldo() + " Fecha de alta: " + empleado3.getAltaContrato());*/
 
-        Empleado[] misEmpleados = new Empleado[4];
+        Jefatura jefeRRHH = new Jefatura("Juan", 5500000, 1006, 5, 25);
+        jefeRRHH.setIncentivo(700000);
+        Empleado[] misEmpleados = new Empleado[6];
         misEmpleados[0] = new Empleado("Juan Galvez", 4000000, 2022, 11, 11);
         misEmpleados[1] = new Empleado("Ana Lopez", 5000000, 2022, 22, 8);
         misEmpleados[2] = new Empleado("María Marín", 3600000, 2021,19, 12);
         misEmpleados[3] = new Empleado("Juan Fernando");
+        misEmpleados[4] = jefeRRHH; // Polimorfismo. Principio de sustitucion
+        misEmpleados[5] = new Jefatura("Maria", 9000000, 2004, 10, 14);
+
         /*for(int i = 0; i< misEmpleados.length; i++){
             misEmpleados[i].subirSueldo(5);
         }*/
@@ -105,7 +110,15 @@ class Jefatura extends Empleado {
 
     //Sobreescribimos el getSueldo de la clase empleado
     public double getSueldo(){
-        double sueldoJefe = getSueldo();
+        // Super indica que es el getter pertenece a la clase padre
+        double sueldoJefe = super.getSueldo();
         return sueldoJefe+incentivo;
     }
 }
+
+/**
+ * Polimorfismo: relacionado con el principio de sustitucion
+ * podemos utilizar un objeto de una subclase  siempre que eñ
+ * programa espere un objeto de la superclase
+ * las varibles objeto son polimorficas
+ */
